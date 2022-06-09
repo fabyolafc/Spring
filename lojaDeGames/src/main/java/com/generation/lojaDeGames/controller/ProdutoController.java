@@ -21,7 +21,7 @@ import com.generation.lojaDeGames.model.ProdutoModel;
 import com.generation.lojaDeGames.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/games")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 

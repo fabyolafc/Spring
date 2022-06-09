@@ -1,5 +1,7 @@
 package com.generation.lojaDeGames.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,15 +22,13 @@ public class ProdutoModel {
 		private long id;
 		
 		@NotNull
-		@Size(min = 5, max = 100)
+		@Size(min = 3, max = 100)
 		private String personagem;
 			
-		@NotNull
-		@Size(min = 10, max = 500)
-		private float valor;
+		private BigDecimal valor;
 		
 		@NotNull
-		@Size(min = 10, max = 500)
+		@Size(min = 3, max = 500)
 		private String habilidade;	
 			
 		@ManyToOne
@@ -51,11 +51,11 @@ public class ProdutoModel {
 			this.personagem = personagem;
 		}
 
-		public float getValor() {
+		public BigDecimal getValor() {
 			return valor;
 		}
 
-		public void setValor(float valor) {
+		public void setValor(BigDecimal valor) {
 			this.valor = valor;
 		}
 
